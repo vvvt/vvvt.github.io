@@ -1,1 +1,48 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/block.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/jquery.custom-scrollbar.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery.custom-scrollbar.min.js"></script>
+    <script type="text/javascript" src="js/block.js"></script>
+</head>
+
+<body>
+    <div id="nav">
+        <a id="nav-db" class="nav-item" href="https://wwwdb.inf.tu-dresden.de/study/teaching/ss_17/datenbanken-grundlagen/">
+            <p class="linktext">DB</p>
+        </a>
+        <a id="nav-emg" class="nav-item" href="https://mg.inf.tu-dresden.de/lehre/einf%C3%BChrung-die-mediengestaltung-sose17">
+            <p class="linktext">EMG</p>
+        </a>
+        <a id="nav-rn" class="nav-item" href="https://tu-dresden.de/ing/informatik/sya/professur-fuer-rechnernetze/studium/lehrveranstaltungen/lehrveranstaltungsdetails?ln=de&lv_id=1">
+            <p class="linktext">RN</p>
+        </a>
+        <a id="nav-mms" class="nav-item" href="https://mt.inf.tu-dresden.de/study/teaching/ss_17/mms_17/">
+            <p class="linktext">MMS</p>
+        </a>
+        <a id="nav-opal" class="nav-item" href="https://bildungsportal.sachsen.de/opal/shiblogin?0">
+            <p class="linktext">OPAL</p>
+        </a>
+        <div id="todo" class="nav-item">
+            <p class="linktext">Todo</p>
+            <div id="todoWrapper">
+                <form>
+                    <input name="newTodoText" rows="4" cols="50">
+                    <button type="button" id="newTodoButton"></button>
+                </form>
+                <br>
+                <div id="todoList"></div>
+            </div>
+        </div>
+    </div>
+    <div id="bigbox">
+        <p id="greeting">Guten Morgen!</p>
+    </div>
+</body>
