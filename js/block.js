@@ -33,6 +33,8 @@ $(document).ready(function () {
         
         if(firstEntry !== "8" && secondEntry!== "8"){
             $('#greeting').html("New Chapter is still offline")
+        }else{
+            $('#greeting').html("New Chapter is online")
         }
     });
 });
