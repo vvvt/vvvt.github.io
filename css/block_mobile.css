@@ -1,0 +1,28 @@
+html,
+body {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/bg2.jpg);
+    background-size: cover;
+}
+
+.nav-item{
+    display: block;
+    height: 20vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    text-align: center;
+}
+
+#todo{
+    display: none;
+}
+
+#bigbox{
+    display: none;
+}
