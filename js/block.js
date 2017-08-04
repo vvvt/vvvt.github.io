@@ -4,14 +4,18 @@ $(document).ready(function () {
     $("#todoList").customScrollbar();
 
     $('.nav-item').not('#todo').mouseenter(function () {
-        $(this).css({
-            "background": "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0))"
-        });
+        if(window.matchMedia("(min-width: 501px)").matches){
+            $(this).css({
+                "background": "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0))"
+            });
+        }
     });
     $('.nav-item').not('#todo').mouseleave(function () {
-        $(this).css({
-            "background": "linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0))"
-        });
+        if(window.matchMedia("(min-width: 501px)").matches){
+            $(this).css({
+                "background": "linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0))"
+            });
+        }
     });
 
     $('#newTodoButton').click(function () {
