@@ -1,0 +1,94 @@
+content:
+
+<div id="todo" class="nav-item">
+    <p class="linktext">Todo</p>
+    <div id="todoWrapper">
+        <form>
+            <input name="newTodoText" rows="4" cols="50">
+            <button type="button" id="newTodoButton"></button>
+        </form>
+        <br>
+        <div id="todoList"></div>
+    </div>
+</div>
+
+
+
+
+style:
+
+#todo {
+    width: 35vw;
+    height: 98vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.5));
+    text-align: center;
+}
+
+#todoWrapper {
+    width: 100%;
+    height: 70vh;
+}
+
+#todoWrapper form {
+    height: 5vh;
+    display: flex;
+    padding: 0px 10px;
+}
+
+#todoWrapper input {
+    width: 90%;
+    border: 3px solid #FFFFFF;
+    border-right: none;
+    background: none;
+    color: white;
+    font-family: Josefin Sans;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+#todoList {
+    height: 50vh;
+}
+
+#newTodoButton {
+    width: 10%;
+    border: 3px solid white;
+    color: white;
+    background-color: white;
+}
+
+#newTodoButton:hover {
+    background-color: #e0e0e0;
+    transition: all ease-in-out .5s;
+}
+
+.todoItem {
+    padding: 0.5vh;
+    margin: 1vh 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.todoItem p {
+    font-family: Josefin Sans;
+    font-size: 20px;
+    text-align: left;
+    word-break: break-all;
+    line-height: normal;
+    text-transform: none;
+}
+
+
+
+
+
+script:
+
+$('#newTodoButton').click(function () {
+    var toAdd = $('input[name=newTodoText]').val();
+    $('#todoList').prepend('<div class="todoItem"><p>' + toAdd + '</p></div>');
+    $(document).on('click', '.todoItem', function () {
+        $(this).remove();
+    });
+});
