@@ -36,18 +36,27 @@ a {
     width: 100vw;
 }
 
-#bigbox {
-    width: 63vw;
-    height: 58vh;
+#footer {
+    display: flex;
+    flex-wrap: nowrap;
     position: absolute;
-    top: 31vh;
-    left: 1vw;
+    background-color: indianred;
+    width: 100vw;
+    height: 5vh;
+    top: 95vh;
 }
 
-#greeting {
-    margin: 2vw;
-    color: white;
+.footerItem{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.15));
+    width: 20vw;
+    height: 5vh;
+}
+
+#chapterStatus{
     font-family: Josefin Sans;
-    font-size: 30px;
-    text-align: justify;
+    font-size: 25px;
+    text-align: center;
+    color: white;
 }

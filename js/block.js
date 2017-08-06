@@ -28,9 +28,9 @@ $(document).ready(function () {
         var secondEntry = result.data.children[1].data.title.substring(19,20);
         
         if(firstEntry !== "8" && secondEntry!== "8"){
-            $('#greeting').html("New Chapter is still offline")
+            $('#chapterStatus').html("New Chapter is offline")
         }else{
-            $('#greeting').html("New Chapter is online")
+            $('#chapterStatus').html("New Chapter is online")
         }
     });
 });
