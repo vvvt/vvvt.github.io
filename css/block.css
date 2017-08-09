@@ -1,3 +1,4 @@
+/* General */
 html,
 body {
     position: absolute;
@@ -9,8 +10,24 @@ body {
     background-size: cover;
 }
 
+a {
+    text-decoration: none;
+    !important
+}
+
+/* Main Page */
+#wrapper {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Bookmarks */
+#navbar{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
 .nav-item {
-    display: inline-grid;
     height: 30vh;
     width: 12vw;
     margin: 1vh 0vh 1vh 1vh;
@@ -18,45 +35,49 @@ body {
     text-align: center;
 }
 
-a {
-    text-decoration: none;
-    !important
-}
-
 .nav-item p {
     font-family: Josefin Sans;
-    font-size: 70px;
+    font-size: 7vh;
     color: white;
     text-transform: lowercase;
     line-height: 15px;
 }
 
-#nav {
-    height: 100vh;
-    width: 100vw;
+/* TIL */
+#tilBox{
+    height: 63vh;
+    width: 62vw;
+    margin-left: 1vh;
+    padding: 0;
+    background-color: rgba(0,0,0,0.25);
 }
 
+#tilText{
+    font-family: Josefin Sans;
+    font-size: 5vh;
+    color: white;
+}
+
+/* Footer */
 #footer {
     display: flex;
     flex-wrap: nowrap;
-    position: absolute;
-    background-color: indianred;
+    position: fixed;
+    background-color: black;
     width: 100vw;
-    height: 5vh;
-    top: 95vh;
+    height: auto;
+    bottom: 0;
 }
 
 .footerItem{
     margin: 0;
     padding: 0;
-    background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.15));
+    background: linear-gradient(to top left, rgba(0,0,0,0), rgba(255,255,255,0.15));
     width: 20vw;
-    height: 5vh;
-}
-
-#chapterStatus{
+    height: auto;
     font-family: Josefin Sans;
-    font-size: 25px;
+    font-size: 3vh;
     text-align: center;
     color: white;
 }
+
