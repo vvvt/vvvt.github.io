@@ -1,8 +1,6 @@
 $(document).ready(function () {
     'use strict';
 
-    $("#todoList").customScrollbar();
-
     $('.nav-item').not('#todo').mouseenter(function () {
         if(window.matchMedia("(min-width: 501px)").matches){
             $(this).css({
