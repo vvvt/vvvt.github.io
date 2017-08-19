@@ -1,25 +1,32 @@
-html, body{
+html,
+body {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    background-color: aquamarine;
+    background-color: #f8eade;
 }
 
-#navbar{
+h2 {
+    font-family: Pacifico;
+    font-size: 5vh;
+    text-align: center;
+}
+
+#navbar {
     height: 100vh;
     width: 20vw;
     background-color: indianred;
     overflow-y: scroll;
 }
 
-.nav-item{
+.nav-item {
     height: 10vw;
     width: 100%;
-    background: linear-gradient(to top left, rgba(0,0,0,0), rgba(255,255,255,0.15));
+    background: linear-gradient(to top left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.15));
 }
 
-#content{
+#recipe {
     height: 100vh;
-    width: 80vw;
+    width: 79vw;
 }
