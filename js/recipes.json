@@ -1,0 +1,53 @@
+{
+    "recipes": [
+        {
+            "name": "Asiatische Gemüsepfanne",
+            "img-link": "images/recipes/asia.jpg",
+            "ingredients": [
+                {
+                    "name": "Reis",
+                    "amount": "1/2 Tasse pro Person",
+                    "img-link": "images/ingredients/rice.jpg"
+                },
+                {
+                    "name": "1/2 Packung Asiatisches Gemüse (gefroren)",
+                    "amount": "nach Bedarf",
+                    "img-link": "images/ingredients/asiaveg.jpg"
+                },
+                {
+                    "name": "Kokosmilch",
+                    "amount": "1 Dose",
+                    "img-link": "images/ingredients/cocos.jpg"
+                },
+                {
+                    "name": "Thai Curry Paste",
+                    "amount": "2 TL",
+                    "img-link": "images/ingredients/thaicurry.jpg"
+                },
+                {
+                    "name": "Salz, Pfeffer, Paprika, Chili, evtl. China Würzer",
+                    "amount": "nach Bedarf",
+                    "img-link": "images/ingredients/asiaveg.jpg"
+                }
+            ],
+            "instructions": [
+                {
+                    "step": 1,
+                    "text": "Setz zuerst mal den Reis auf. (mehr dazu)"
+                },
+                {
+                    "step": "2",
+                    "text": "Pack das Gemüse in eine Pfanne, mach den Herd an und lass es auftauen."
+                },
+                {
+                    "step": "3",
+                    "text": "Schütte die Kokosmilch mit in die Pfanne."
+                },
+                {
+                    "step": "4",
+                    "text": "Nimm zum Würzen etwa 2 TL der Thai Curry Paste als Basis. Anschließend noch mit Salz, Pfeffer, Paprika und Chili abschmecken. Zur Not passt auch die China Gewürzmischung."
+                }
+            ]
+        }
+    ]
+}
