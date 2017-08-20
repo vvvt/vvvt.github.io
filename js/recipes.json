@@ -2,7 +2,7 @@
     "recipes": [
         {
             "name": "Asiatische Gemüsepfanne",
-            "img-link": "images/recipes/asia.jpg",
+            "imgLink": "images/meals/asia.jpg",
             "ingredients": [
                 {
                     "name": "Reis",
@@ -10,7 +10,7 @@
                     "img-link": "images/ingredients/rice.jpg"
                 },
                 {
-                    "name": "1/2 Packung Asiatisches Gemüse (gefroren)",
+                    "name": "Asiatisches Gemüse (gefroren)",
                     "amount": "nach Bedarf",
                     "img-link": "images/ingredients/asiaveg.jpg"
                 },
@@ -48,6 +48,24 @@
                     "text": "Nimm zum Würzen etwa 2 TL der Thai Curry Paste als Basis. Anschließend noch mit Salz, Pfeffer, Paprika und Chili abschmecken. Zur Not passt auch die China Gewürzmischung."
                 }
             ]
+        },
+        {
+            "name": "Couscous mit Gemüse"
+        },
+        {
+            "name": "Nudelauflauf"
+        },
+        {
+            "name": "Gebratener Reis"
+        },
+        {
+            "name": "Fritatta"
+        },
+        {
+            "name": "Pasta Käse-Brokkoli"
+        },
+        {
+            "name": "Fruchtjoghurt"
         }
     ]
 }
