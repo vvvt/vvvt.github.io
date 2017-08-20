@@ -50,22 +50,54 @@
             ]
         },
         {
-            "name": "Couscous mit Gemüse"
-        },
-        {
-            "name": "Nudelauflauf"
-        },
-        {
-            "name": "Gebratener Reis"
-        },
-        {
-            "name": "Fritatta"
-        },
-        {
-            "name": "Pasta Käse-Brokkoli"
-        },
-        {
-            "name": "Fruchtjoghurt"
+            "name": "Couscous mit Gemüse",
+            "imgLink": "images/meals/couscous.jpg",
+            "ingredients": [
+                {
+                    "name": "Couscous",
+                    "amount": "ca 250 g für 2 Portionen",
+                    "img-link": "images/ingredients/rice.jpg"
+                },
+                {
+                    "name": "Wasser",
+                    "amount": "1ml pro Gramm Couscous"
+                },
+                {
+                    "name": "Gurke",
+                    "amount": "1"
+                },
+                {
+                    "name": "Paprika",
+                    "amount": "2"
+                },
+                {
+                    "name": "Salz, Pfeffer, Paprika, Chili, evtl. China Würzer",
+                    "amount": "nach Bedarf",
+                    "img-link": "images/ingredients/asiaveg.jpg"
+                }
+            ],
+            "instructions": [
+                {
+                    "step": "1",
+                    "text": "Schütte Wasser, Öl und Salz in einen Topf und lass es aufkochen."
+                },
+                {
+                    "step": "2",
+                    "text": "Nimm den Topf vom Herd und rühre den Couscous unter."
+                },
+                {
+                    "step": "3",
+                    "text": "Rühre den Couscous so lange, bis er nicht mehr klumpt."
+                },
+                {
+                    "step": "4",
+                    "text": "Schneide das Gemüse und rühre es unter. Die Menge und Art des Gemüses kann nach Belieben angepasst werden."
+                },
+                {
+                    "step": "5",
+                    "text": "Zum Schluss noch kräftig mit Anschließend noch mit Salz, Pfeffer, Paprika und Chili abschmecken. Zur Not passt auch die China Gewürzmischung."
+                }
+                ]
         }
     ]
 }
