@@ -60,20 +60,23 @@
                 },
                 {
                     "name": "Wasser",
-                    "amount": "1ml pro Gramm Couscous"
+                    "amount": "1ml pro Gramm Couscous",
+                    "img-link": "images/ingredients/rice.jpg"
                 },
                 {
                     "name": "Gurke",
-                    "amount": "1"
+                    "amount": "1",
+                    "img-link": "images/ingredients/rice.jpg"
                 },
                 {
                     "name": "Paprika",
-                    "amount": "2"
+                    "amount": "2",
+                    "img-link": "images/ingredients/rice.jpg"
                 },
                 {
                     "name": "Salz, Pfeffer, Paprika, Chili, evtl. China Würzer",
                     "amount": "nach Bedarf",
-                    "img-link": "images/ingredients/asiaveg.jpg"
+                    "img-link": "images/ingredients/rice.jpg"
                 }
             ],
             "instructions": [
@@ -98,6 +101,48 @@
                     "text": "Zum Schluss noch kräftig mit Anschließend noch mit Salz, Pfeffer, Paprika und Chili abschmecken. Zur Not passt auch die China Gewürzmischung."
                 }
                 ]
+        },
+        {
+            "name": "Nudelauflauf",
+            "imgLink": "images/meals/auflauf.jpg",
+            "ingredients": [
+                {
+                    "name": "Nudeln (z.B. Spirelli, Fussili, ...)",
+                    "amount": "1/2 Auflaufform",
+                    "img-link": "images/ingredients/rice.jpg"
+                },
+                {
+                    "name": "Gehackte Tomaten",
+                    "amount": "1 Dose",
+                    "img-link": "images/ingredients/rice.jpg"
+                },
+                {
+                    "name": "Sahne",
+                    "amount": "1 Packung",
+                    "img-link": "images/ingredients/rice.jpg"
+                },
+                {
+                    "name": "Erbsen",
+                    "amount": "nach Bedarf",
+                    "img-link": "images/ingredients/rice.jpg"
+                },
+                {
+                    "name": "Gemüsebrühe",
+                    "amount": "nach Bedarf",
+                    "img-link": "images/ingredients/rice.jpg"
+                },
+                {
+                    "name": "Salz, Pfeffer, Paprika",
+                    "amount": "nach Bedarf",
+                    "img-link": "images/ingredients/rice.jpg"
+                }
+            ],
+            "instruction": [
+                {
+                    "step": "1",
+                    "text": ""
+                }
+            ]
         }
     ]
 }
