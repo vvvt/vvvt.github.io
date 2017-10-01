@@ -127,6 +127,11 @@
                     "img-link": "images/ingredients/rice.jpg"
                 },
                 {
+                    "name": "Mozarella",
+                    "amount": "1-2 Päckchen",
+                    "img-link": "images/ingredients/rice.jpg"
+                },
+                {
                     "name": "Gemüsebrühe",
                     "amount": "nach Bedarf",
                     "img-link": "images/ingredients/rice.jpg"
@@ -140,9 +145,119 @@
             "instruction": [
                 {
                     "step": "1",
-                    "text": ""
+                    "text": "Nudeln kochen. Für die benötigte Menge einfach die Auflaufform etwa zur Hälfte mit ungekochten Nudeln füllen. Anschließend die Nudeln in einem Sieb abgießen."
+                },
+                {
+                    "step": "2",
+                    "text": "Mozarella in kleine Würfel schneiden."
+                },
+                {
+                    "step": "3",
+                    "text": "In einem Topf Tomaten, Erbsen, Sahne und etwa 2/3 der Mozarellawürfel vermengen und anschließend mit Gemüsebrühe, Salz, Pfeffer und Paprika würzen."
+                },
+                {
+                    "step": "4",
+                    "text": "Den Ofen auf 200° Ober-/Unterhitze vorheizen."
+                },
+                {
+                    "step": "5",
+                    "text": "Die Nudeln mit in den Topf geben und gut vermischen."
+                },
+                {
+                    "step": "6",
+                    "text": "Den Topfinhalt in die Auflaufform(en) geben, den restlichen Mozarella auf der Oberfläche verteilen und anschließend für etwa 15 Minuten in den Ofen schieben. Am besten dabei bleiben, damit man den Auflauf rausnehmen kann, wenn der Käse geschmolzen, aber die obersten Nudeln noch nicht verbrannt sind."
                 }
             ]
+        },
+        {
+            "name": "Bratnudeln",
+            "imgLink": "images/meals/mienoodle.jpg",
+            "ingredients": [
+                {
+                    "name": "Mie Nudeln",
+                    "amount": "nach Bedarf",
+                    "img-link": "images/ingredients/rice.jpg"
+                },
+                {
+                    "name": "Lauch/Porree",
+                    "amount": "1 Stange",
+                    "img-link": "images/ingredients/rice.jpg"
+                },
+                {
+                    "name": "Ei",
+                    "amount": "1",
+                    "img-link": "images/ingredients/rice.jpg"
+                },
+                {
+                    "name": "Karotte",
+                    "amount": "1",
+                    "img-link": "images/ingredients/rice.jpg"
+                },
+                {
+                    "name": "Mungobohnensprossen",
+                    "amount": "nach Bedarf",
+                    "img-link": "images/ingredients/rice.jpg"
+                },
+                {
+                    "name": "Weißer Pfeffer",
+                    "amount": "nach Bedarf",
+                    "img-link": "images/ingredients/rice.jpg"
+                },
+                {
+                    "name": "Sojasoße",
+                    "amount": "2 EL",
+                    "img-link": "images/ingredients/rice.jpg"
+                }
+            ],
+            "instructions": [
+                {
+                    "step": "1",
+                    "text": "Koche die Nudeln wie auf der Verpackung beschrieben."
+                },
+                {
+                    "step": "2",
+                    "text": "Schneide den Lauch in Ringe. Du kannst ihn auch zunächst einmal längs teilen um ihn später besser trennen zu können. "
+                },                
+                {
+                    "step": "3",
+                    "text": "Brate jetzt zunächst den Lauch an."
+                },                
+                {
+                    "step": "4",
+                    "text": "Nimm dir einen Sparschäler und gib damit dünne Möhrenstreifen mit in die Pfanne."
+                },                
+                {
+                    "step": "5",
+                    "text": "Als nächstes kommen die Mungobohnensprossen mit in die Pfanne."
+                },                
+                {
+                    "step": "6",
+                    "text": "Gib die inzwischen fertigen Nudeln mit in die Pfanne. Je nachdem wie haftend deine Pfanne ist, gibst du am besten noch etwas Öl dazu, damit die Nudeln nicht anbrennen."
+                },
+                {
+                    "step": "7",
+                    "text": "Schlage das Ei in unter stetigem Rühren in die Pfanne"
+                },
+                {
+                    "step": "8",
+                    "text": "Gib nun die Sojasoße hinzu und schmecke das ganze mit weißem Pfeffer ab. Je nach Geschmack und Menge kannst du auch noch mehr Sojasoße hinzufügen."
+                }
+                ]
         }
     ]
 }
+
+/*
+
+    {
+        "name": "",
+        "amount": "",
+        "img-link": "images/ingredients/rice.jpg"
+    },
+    
+    {
+        "step": "",
+        "text": ""
+    },
+
+*/
