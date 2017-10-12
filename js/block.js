@@ -13,25 +13,22 @@ $(document).ready(function () {
         }
     });
 
-    var recJSON, i;
+    var i;
 
     $.getJSON("js/bookmarks.json", function (result) {
-        recJSON = result;
-        console.log("get JSON finished");
+        for (i = 0; i < result.bookmarks.length; i++) {
+            $('#navbar').append("<a class=\"nav-item\" href=\"" + result.bookmarks[i].link + "\">" + "<p class=\"linktext\">" + result.bookmarks[i].title + "</p></a>");
+        }
     });
 
-    for (i = 0; i < recJSON.bookmarks.length; i++) {
-        $('#navbar').append("<a class=\"nav-item\" href=\"" + recJSON.bookmarks[i].link + "\">" + "<p class=\"linktext\">" + recJSON.bookmarks[i].title + "</p></a>");
-    }
-
-    $('.nav-item').not('#todo').mouseenter(function () {
+    $('.nav-item').mouseenter(function () {
         if (window.matchMedia("(min-width: 501px)").matches) {
             $(this).css({
                 "background": "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0))"
             });
         }
     });
-    $('.nav-item').not('#todo').mouseleave(function () {
+    $('.nav-item').mouseleave(function () {
         if (window.matchMedia("(min-width: 501px)").matches) {
             $(this).css({
                 "background": "linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0))"
