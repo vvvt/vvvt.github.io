@@ -30,7 +30,6 @@ $(document).ready(function () {
             $('#instruction-container').append('<h3>Schritt ' + recJSON.recipes[0].instructions[i].step + '</h3>');
             $('#instruction-container').append('<p>' + recJSON.recipes[0].instructions[i].text + '</p>');
         }
-        2
     });
 
     $('#rec2').click(function () {

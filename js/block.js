@@ -1,3 +1,6 @@
+/*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */
+/*global $*/
+
 $(document).ready(function () {
     'use strict';
 
@@ -10,14 +13,14 @@ $(document).ready(function () {
         }
     });
 
-    var recJSON;
+    var recJSON, i;
 
     $.getJSON("js/bookmarks.json", function (result) {
         recJSON = result;
         console.log("get JSON finished");
     });
 
-    for (var i = 0; i < recJSON.bookmarks.length; i++) {
+    for (i = 0; i < recJSON.bookmarks.length; i++) {
         $('#navbar').append("<a class=\"nav-item\" href=\"" + recJSON.bookmarks[i].link + "\">" + "<p class=\"linktext\">" + recJSON.bookmarks[i].title + "</p></a>");
     }
 
