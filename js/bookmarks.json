@@ -5,12 +5,16 @@
             "link": "https://mt.inf.tu-dresden.de/study/teaching/ws_17-18/wme_17-18/"
         },
         {
-            "title": "OPAL",
-            "link": "https://bildungsportal.sachsen.de/opal/shiblogin?0"
-        },
-        {
             "title": "CRC",
             "link": "https://www.nct-dresden.de/forschung/main-research-areas/professorship-for-translational-surgical-oncology/teaching.html"
+        },
+        {
+            "title": "BUS",
+            "link": "inf.tu-dresden.de/index.php?node_id=1312"
+        },
+        {
+            "title": "OPAL",
+            "link": "https://bildungsportal.sachsen.de/opal/shiblogin?0"
         }
     ]
 }
