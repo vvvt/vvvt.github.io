@@ -1,5 +1,5 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */
-/*global $*/
+/*global $, document*/
 
 $(document).ready(function () {
     'use strict';
@@ -9,7 +9,6 @@ $(document).ready(function () {
             if (xhr.overrideMimeType) {
                 xhr.overrideMimeType("application/json");
             }
-            console.log("ajaxSetup done");
         }
     });
 
@@ -19,19 +18,6 @@ $(document).ready(function () {
         for (i = 0; i < result.bookmarks.length; i++) {
             $('#navbar').append('<a class="nav-item" href="' + result.bookmarks[i].link + '"><p class="linktext">' + result.bookmarks[i].title + '</p></a>');
         }
-    });
-
-
-    $('.nav-item').mouseenter(function () {
-        alert("mouseenter");    
-        $(this).css({
-            "background": "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0))"
-        });
-    });
-    $('.nav-item').mouseleave(function () {
-        $(this).css({
-            "background": "linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0))"
-        });
     });
 
     $.getJSON("https://www.reddit.com/r/todayilearned/top.json?t=hour&limit=1", function (result) {
