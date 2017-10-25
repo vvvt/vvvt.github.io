@@ -48,22 +48,6 @@ a {
     line-height: 15px;
 }
 
-/* Search Bar */
-#searchbar{
-    height: 8vh;
-    width: 49vw;
-    margin: 5vh 0vh 1vh 1vh;
-    border: none;
-    font-family: Josefin Sans;
-    font-size: 7vh;
-    color: white;
-    background: rgba(0,0,0,0.15);
-}
-
-#searchbar:focus{
-    background-color: rgba(0,0,0,0.4);
-}
-
 /* TIL */
 #tilBox{
     height: 63vh;
