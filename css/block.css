@@ -1,4 +1,5 @@
 /* General */
+
 html,
 body {
     position: absolute;
@@ -16,18 +17,15 @@ a {
 }
 
 /* Main Page */
+
 #wrapper {
     height: 100vh;
     width: 100vw;
 }
 
-#topwrapper{
-    display: flex;
-    flex-wrap: nowrap;
-}
-
 /* Bookmarks */
-#navbar{
+
+#navbar {
     display: flex;
     flex-wrap: nowrap;
 }
@@ -48,8 +46,23 @@ a {
     line-height: 15px;
 }
 
+/* TIL */
+
+#til-wrapper {
+    width: 47vw;
+    padding: 0 2vh;
+}
+
+#til-text {
+    font-size: 4vh;
+    line-height: normal;
+    text-align: left;
+    text-transform: none;
+}
+
 /* Search Bar */
-#searchbar{
+
+#searchbar {
     height: 8vh;
     width: 49vw;
     margin: 5vh 0vh 1vh 1vh;
@@ -57,23 +70,30 @@ a {
     font-family: Josefin Sans;
     font-size: 7vh;
     color: white;
-    background: rgba(0,0,0,0.15);
+    background: rgba(0, 0, 0, 0.15);
 }
 
-#searchbar:focus{
-    background-color: rgba(0,0,0,0.4);
+#searchbar:focus {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* TIL */
-#tilBox{
-    height: 63vh;
-    width: 62vw;
-    margin-left: 1vh;
-    padding: 0;
+/* footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 4vh;
 }
 
-#tilText{
-    font-family: Josefin Sans;
-    font-size: 5vh;
+#word-of-the-week {
     color: white;
+    font-family: Josefin Sans;
+    background: linear-gradient(to bottom, rgba(214, 0, 0, 0.45), rgba(0, 0, 0, 0));
+}
+
+.footer-item {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+    width: 20%;
+    padding: 0 2vh;
 }
