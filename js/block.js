@@ -21,6 +21,6 @@ $(document).ready(function () {
     });
 
     $.getJSON("https://www.reddit.com/r/todayilearned/top.json?t=hour&limit=1", function (result) {
-        $('#tilText').html(result.data.children[0].data.title + ' <a href="' + result.data.children[0].data.url + '">&#119101;</a>');
+        $('#navbar').append('<a id="til-wrapper" class="nav-item" href="' + result.data.children[0].data.url + '"><p id="til-text" class="linktext">' + result.data.children[0].data.title + '</p></a>');
     });
 });
