@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
 
-    background-image: url(../images/bg2.jpg);
+    background-image: url(../images/wallpaper_rocket.jpg);
     background-size: cover;
 }
 
@@ -54,6 +54,7 @@ a {
 #til-wrapper {
     width: 47vw;
     padding: 0 2vh;
+    height: auto;
 }
 
 #til-text {
