@@ -1,0 +1,38 @@
+{
+  "bookmarks": [
+    {
+      "title": "WME",
+      "link": "https://mt.inf.tu-dresden.de/study/teaching/ws_17-18/wme_17-18/"
+    },
+    {
+      "title": "BUS",
+      "link": "http://inf.tu-dresden.de/index.php?node_id=1312",
+      "img-link": ""
+    },
+    {
+      "title": "OPAL",
+      "link": "https://bildungsportal.sachsen.de/opal/shiblogin?0",
+      "img-link": ""
+    },
+    {
+      "title": "GitHub",
+      "link": "https://github.com",
+      "img-link": ""
+    },
+    {
+      "title": "Deezer",
+      "link": "http://www.deezer.com/us/",
+      "img-link": ""
+    },
+    {
+      "title": "Youtube",
+      "link": "https://www.youtube.com/feed/subscriptions",
+      "img-link": ""
+    },
+    {
+      "title": "Amazon",
+      "link": "https://amazon.de",
+      "img-link": ""
+    }
+  ]
+}
