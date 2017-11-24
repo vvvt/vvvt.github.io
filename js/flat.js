@@ -16,7 +16,7 @@ $(document).ready(function() {
 
   $.getJSON("js/flat.json", function(result) {
     for (i = 0; i < result.bookmarks.length; i++) {
-      $('#bookmarks-wrapper').append('<a class="bookmark circular" href="' + result.bookmarks[i].link + '"><p class="linktext">' + result.bookmarks[i].title + '</p></a>');
+      $('#bookmarks-wrapper').append('<a class="bookmark circular" href="' + result.bookmarks[i].link + '"><img src="' + result.bookmarks[i].img + '" /></a>');
     }
   });
 

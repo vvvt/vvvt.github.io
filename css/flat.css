@@ -60,6 +60,13 @@ a {
   text-align: center;
 }
 
+.bookmark img {
+  height: 100%;
+  width: 75%;
+  display: block;
+  margin: auto;
+}
+
 .til-text {
   font-size: 3vh;
   color: white;
