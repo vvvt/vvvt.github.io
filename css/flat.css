@@ -32,7 +32,7 @@ a {
 #image {
   width: 20vw;
   height: 20vw;
-  background: url(../images/zoro.gif) no-repeat center center;
+  background: url(../svg/zoro.svg) no-repeat center center;
   background-size: cover;
 }
 
