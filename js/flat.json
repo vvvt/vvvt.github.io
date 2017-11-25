@@ -18,7 +18,7 @@
     {
       "title": "GitHub",
       "link": "https://github.com",
-      "img": ""
+      "img": "svg/github.svg"
     },
     {
       "title": "Deezer",
@@ -33,7 +33,7 @@
     {
       "title": "Amazon",
       "link": "https://amazon.de",
-      "img": ""
+      "img": "svg/amazon.svg"
     }
   ]
 }
