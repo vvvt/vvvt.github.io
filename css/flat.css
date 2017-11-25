@@ -48,12 +48,11 @@ a {
 #bookmarks-wrapper {
   display: flex;
   flex-direction: row;
-  width: 100vh;
   margin: auto;
 }
 
 .bookmark {
-  margin: 0 1vw;
+  margin: 0 auto;
   height: 10vh;
   width: 10vh;
   background-color: rgb(235, 221, 164);
