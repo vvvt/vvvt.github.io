@@ -37,15 +37,25 @@ $(document).ready(function () {
         return subject;
     };
 
+    var secondSubstring = function (subject) {
+        for (i = 0; subject.length; i++) {
+            if (subject.substr(i, 1) === " ") {
+                return subject.substr(i + 1);
+            }
+        }
+        return subject;
+    };
+
     var switchEngine = function (qstring) {
         for (i = 0; i < search.engines.length; i++) {
             if (qstring === search.engines[i].identifier) {
                 $('#search-icon').attr("src", search.engines[i].img);
-                return;
+                return search.engines[i].url;
             } else {
                 $('#search-icon').attr("src", "svg/search_black.svg");
             }
         }
+        return "https://duckduckgo.com/?q=";
     };
 
     $('#searchbar').keyup(function (event) {
@@ -57,6 +67,5 @@ $(document).ready(function () {
     });
 
     $('#search-button').click(function () {
-        window.location.assign('http://www.mozilla.org');
     });
 });
