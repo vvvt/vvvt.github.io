@@ -2,19 +2,23 @@
     "engines": [
         {
             "identifier": "yt",
-            "img": "svg/tube.svg"
+            "img": "svg/tube.svg",
+            "url": "https://www.youtube.com/results?search_query="
         },
         {
             "identifier": "imdb",
-            "img": "svg/clef.svg"
+            "img": "svg/imdb.svg",
+            "url": "http://www.imdb.com/find?ref_=nv_sr_fn&q="
         },
         {
             "identifier": "we",
-            "img": "svg/opal.svg"
+            "img": "svg/wikipedia_en.svg",
+            "url": "https://en.wikipedia.org/wiki/"
         },
         {
-            "identifier": "ud",
-            "img": "svg/deezer.svg"
+            "identifier": "wd",
+            "img": "svg/wikipedia_de.svg",
+            "url": "https://de.wikipedia.org/wiki/"
         }
     ]
 }
