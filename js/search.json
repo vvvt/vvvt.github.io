@@ -1,20 +1,20 @@
 {
-  "engines": [
-    {
-      "identifier": "yt",
-      "color": "red"
-    },
-    {
-      "identifier": "imdb",
-      "color": "yellow"
-    },
-    {
-      "identifier": "we",
-      "color": "blue"
-    },
-    {
-      "identifier": "ud",
-      "color": "green"
-    }
-  ]
+    "engines": [
+        {
+            "identifier": "yt",
+            "img": "svg/tube.svg"
+        },
+        {
+            "identifier": "imdb",
+            "img": "svg/clef.svg"
+        },
+        {
+            "identifier": "we",
+            "img": "svg/opal.svg"
+        },
+        {
+            "identifier": "ud",
+            "img": "svg/deezer.svg"
+        }
+    ]
 }

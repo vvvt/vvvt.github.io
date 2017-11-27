@@ -12,8 +12,6 @@ $(document).ready(function () {
         }
     });
 
-
-
     var i, search;
 
     $.getJSON('js/flat.json', function (result) {
@@ -28,7 +26,6 @@ $(document).ready(function () {
 
     $.getJSON('js/search.json', function (result) {
         search = result;
-        console.log(search.engines.length);
     });
 
     var firstSubstring = function (subject) {
@@ -40,11 +37,22 @@ $(document).ready(function () {
         return subject;
     };
 
+    var switchEngine = function (qstring) {
+        for (i = 0; i < search.engines.length; i++) {
+            if (qstring === search.engines[i].identifier) {
+                $('#search-icon').attr("src", search.engines[i].img);
+                return;
+            } else {
+                $('#search-icon').attr("src", "svg/search_black.svg");
+            }
+        }
+    };
+
     $('#searchbar').keyup(function (event) {
         if (event.keyCode === 13) {
             $('#search-button').click();
         } else if (event.keyCode === 32) {
-            console.log(firstSubstring($('#searchbar').val()));
+            switchEngine(firstSubstring($('#searchbar').val()));
         }
     });
 
