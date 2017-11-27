@@ -55,7 +55,7 @@ a {
 }
 
 #searchbar {
-    height: 6.8vh;
+    height: 6.5vh;
     width: 100%;
     margin-left: 2vw;
 
@@ -73,21 +73,14 @@ a {
 }
 
 /* bookmarks */
-#bookmarks {
-    height: 10vh;
-}
-
-#bookmarks-wrapper {
-    margin: auto;
-    width: 100%;
-}
-
-.bookmark {
+.bookmarks {
+    height: 7vh;
     margin: 0 auto;
-    height: 10vh;
-    width: 10vh;
+}
+
+.bookmark-item {
+    width: 7vh;
     background-color: rgb(235, 221, 164);
-    text-align: center;
 }
 
 .til-text {
