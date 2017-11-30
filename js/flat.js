@@ -1,5 +1,5 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */
-/*global $, document*/
+/*global $, document, window*/
 
 $(document).ready(function () {
     'use strict';
@@ -67,5 +67,6 @@ $(document).ready(function () {
     });
 
     $('#search-button').click(function () {
+        window.location = switchEngine(firstSubstring($('#searchbar').val())) + secondSubstring($('#searchbar').val());
     });
 });
