@@ -50,12 +50,12 @@ $(document).ready(function () {
         for (i = 0; i < search.engines.length; i++) {
             if (qstring === search.engines[i].identifier) {
                 $('#search-icon').attr("src", search.engines[i].img);
-                return search.engines[i].url;
+                return search.engines[i].url + secondSubstring($('#searchbar').val());
             } else {
                 $('#search-icon').attr("src", "svg/search_black.svg");
             }
         }
-        return "https://duckduckgo.com/?q=";
+        return "https://duckduckgo.com/?q=" + $('#searchbar').val();
     };
 
     $('#searchbar').keyup(function (event) {
@@ -67,6 +67,6 @@ $(document).ready(function () {
     });
 
     $('#search-button').click(function () {
-        window.location = switchEngine(firstSubstring($('#searchbar').val())) + secondSubstring($('#searchbar').val());
+        window.location = switchEngine(firstSubstring($('#searchbar').val()));
     });
 });
