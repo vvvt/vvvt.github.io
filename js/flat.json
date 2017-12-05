@@ -1,44 +1,52 @@
 {
-  "bookmarks": [
-    {
-      "title": "WME",
-      "link": "https://mt.inf.tu-dresden.de/study/teaching/ws_17-18/wme_17-18/",
-      "img": "svg/iml.svg"
+    "bookmarks": [
+        {
+            "title": "WME",
+            "link": "https://mt.inf.tu-dresden.de/study/teaching/ws_17-18/wme_17-18/",
+            "img": "svg/iml.svg",
+            "highlight": "#80eb3d"
     },
-    {
-      "title": "BUS",
-      "link": "http://inf.tu-dresden.de/index.php?node_id=1312",
-      "img": "svg/bus.svg"
+        {
+            "title": "BUS",
+            "link": "http://inf.tu-dresden.de/index.php?node_id=1312",
+            "img": "svg/bus.svg",
+            "highlight": "#4d4dd9"
     },
-    {
-      "title": "OPAL",
-      "link": "https://bildungsportal.sachsen.de/opal/shiblogin?0",
-      "img": "svg/opal.svg"
+        {
+            "title": "OPAL",
+            "link": "https://bildungsportal.sachsen.de/opal/shiblogin?0",
+            "img": "svg/opal.svg",
+            "highlight": "#3ac5de"
     },
-    {
-      "title": "GitHub",
-      "link": "https://github.com",
-      "img": "svg/github.svg"
+        {
+            "title": "GitHub",
+            "link": "https://github.com",
+            "img": "svg/github.svg",
+            "highlight": "#000000"
     },
-    {
-      "title": "Deezer",
-      "link": "http://www.deezer.com/us/",
-      "img": "svg/deezer.svg"
+        {
+            "title": "Deezer",
+            "link": "http://www.deezer.com/us/",
+            "img": "svg/deezer.svg",
+            "highlight": "#000000"
     },
-    {
-      "title": "Youtube",
-      "link": "https://www.youtube.com/feed/subscriptions",
-      "img": "svg/tube.svg"
+        {
+            "title": "Youtube",
+            "link": "https://www.youtube.com/feed/subscriptions",
+            "img": "svg/tube.svg",
+            "highlight": "red"
     },
-    {
-      "title": "Amazon",
-      "link": "https://amazon.de",
-      "img": "svg/amazon.svg"
+        {
+            "title": "Amazon",
+            "link": "https://amazon.de",
+            "img": "svg/amazon.svg",
+            "highlight": "#ffe268"
     },
-    {
-      "title": "Orchester",
-      "link": "https://owncloud.werkstattorchester.de",
-      "img": "svg/clef.svg"
+        {
+            "title": "Orchester",
+            "link": "https://owncloud.werkstattorchester.de",
+            "img": "svg/clef.svg",
+            "highlight": "black"
     }
   ]
 }

@@ -18,6 +18,18 @@ $(document).ready(function () {
         for (i = 0; i < result.bookmarks.length; i++) {
             $('#bookmarks').append('<a class="bookmarks bookmark-item circular" href="' + result.bookmarks[i].link + '"><img class="icon" src="' + result.bookmarks[i].img + '" /></a>');
         }
+
+
+        $('.bookmark-item').mouseenter(function () {
+            $(this).animate({
+                backgroundColor: result.bookmarks[$(this).index()].highlight
+            }, "fast");
+        });
+        $('.bookmark-item').mouseleave(function () {
+            $(this).animate({
+                backgroundColor: "white"
+            }, "fast");
+        });
     });
 
     $.getJSON('https://www.reddit.com/r/todayilearned/top.json?t=hour&limit=1', function (result) {
