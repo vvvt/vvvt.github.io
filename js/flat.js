@@ -39,6 +39,10 @@ $(document).ready(function () {
     $.getJSON('js/search.json', function (result) {
         search = result;
     });
+    
+    $.getJSON('js/data.json', function (result) {
+        console.log(result);
+    });
 
     var firstSubstring = function (subject) {
         for (i = 0; subject.length; i++) {
