@@ -1,8 +1,12 @@
 {
     "bookmarks": [
         {
-            "title": "DIA",
-            "link": "https://wwwdb.inf.tu-dresden.de/study/teaching/summer-term-2018/datenintegration-und-analyse/"
+            "title": "BUS",
+            "link": "http://www.inf.tu-dresden.de/index.php?node_id=1312&ln=de"
+        },
+        {
+            "title": "BFL",
+            "link": "https://tu-dresden.de/ing/informatik/ai/mci/studium/lehrveranstaltungen-1/barrierefreie-literaturerstellung"
         },
         {
             "title": "CRC",

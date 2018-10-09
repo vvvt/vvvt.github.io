@@ -12,10 +12,8 @@ $(document).ready(function () {
         }
     });
 
-    var i;
-
     $.getJSON("js/bookmarks.json", function (result) {
-        for (i = 0; i < result.bookmarks.length; i++) {
+        for (let i = 0; i < result.bookmarks.length; i++) {
             $('#navbar').append('<a class="nav-item" href="' + result.bookmarks[i].link + '"><p class="linktext">' + result.bookmarks[i].title + '</p></a>');
         }
     });

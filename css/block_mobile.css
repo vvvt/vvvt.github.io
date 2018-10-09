@@ -5,9 +5,7 @@ body {
     width: 100vw;
     margin: 0;
     padding: 0;
-    background-image: none;
-    background: none;
-    background-color: green;
+    background: green none;
 }
 
 .nav-item{
@@ -30,7 +28,7 @@ a {
 }
 
 .nav-item p {
-    font-family: Josefin Sans;
+    font-family: Josefin Sans, sans-serif;
     font-size: 70px;
     color: white;
     text-transform: lowercase;
@@ -39,6 +37,3 @@ a {
     margin: 0;
 }
 
-#bigbox{
-    display: none;
-}

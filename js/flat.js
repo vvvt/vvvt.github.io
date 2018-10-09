@@ -12,10 +12,19 @@ $(document).ready(function () {
         }
     });
 
-    var i, search;
+    const search = getSearchJSON();
+
+    function getSearchJSON() {
+        let output;
+        $.getJSON('js/search.json', function (result) {
+            output = result;
+        }).ready(function () {
+            return output;
+        });
+    }
 
     $.getJSON('js/flat.json', function (result) {
-        for (i = 0; i < result.bookmarks.length; i++) {
+        for (let i = 0; i < result.bookmarks.length; i++) {
             $('#bookmarks').append('<a class="bookmarks bookmark-item circular" href="' + result.bookmarks[i].link + '"><img class="icon" src="' + result.bookmarks[i].img + '" /></a>');
         }
 
@@ -24,8 +33,7 @@ $(document).ready(function () {
             $(this).animate({
                 backgroundColor: result.bookmarks[$(this).index()].highlight
             }, "fast");
-        });
-        $('.bookmark-item').mouseleave(function () {
+        }).mouseleave(function () {
             $(this).animate({
                 backgroundColor: "white"
             }, "fast");
@@ -35,17 +43,13 @@ $(document).ready(function () {
     $.getJSON('https://www.reddit.com/r/todayilearned/top.json?t=hour&limit=1', function (result) {
         $('#til').append('<a href="' + result.data.children[0].data.url + '"><p class="til-text">' + result.data.children[0].data.title + '</p></a>');
     });
-
-    $.getJSON('js/search.json', function (result) {
-        search = result;
-    });
     
     $.getJSON('js/data.json', function (result) {
         console.log(result);
     });
 
-    var firstSubstring = function (subject) {
-        for (i = 0; subject.length; i++) {
+    function firstSubstring (subject) {
+        for (let i = 0; subject.length; i++) {
             if (subject.substr(i, 1) === " ") {
                 return subject.substr(0, i);
             }
@@ -53,8 +57,8 @@ $(document).ready(function () {
         return subject;
     };
 
-    var secondSubstring = function (subject) {
-        for (i = 0; subject.length; i++) {
+    function secondSubstring (subject) {
+        for (let i = 0; subject.length; i++) {
             if (subject.substr(i, 1) === " ") {
                 return subject.substr(i + 1);
             }
@@ -62,8 +66,8 @@ $(document).ready(function () {
         return subject;
     };
 
-    var switchEngine = function (qstring) {
-        for (i = 0; i < search.engines.length; i++) {
+    function switchEngine (qstring) {
+        for (let i = 0; i < search.engines.length; i++) {
             if (qstring === search.engines[i].identifier) {
                 $('#search-icon').attr("src", search.engines[i].img);
                 return search.engines[i].url + secondSubstring($('#searchbar').val());
