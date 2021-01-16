@@ -1,113 +1,114 @@
-/** Globale Variablen **/
-var x, y;                       // Position der Maus
-var activeBrushSize;                     // Radius der gezeichneten Punkte
-var draw = false;
-var activeColor;          // aktuell ausgewählte Farbe
-var mode = 1;                   // 1 - paint; 2 - fill; 3 - shape
+// Smooth Drawing by Nikhil Krishnan on Codepen (https://codepen.io/nikhil8krishnan/pen/NNyJGd)
 
-/** Event-Handler **/
-document.addEventListener("mousemove", position_handler);
-document.addEventListener("mousedown", function (event) {
-    let canvas = document.getElementById("canvas");
-    if (event.x > canvas.offsetLeft && event.x < (canvas.offsetLeft + canvas.width) && event.y > canvas.offsetTop && event.y < (canvas.offsetTop + canvas.height)) {
-        switch (mode) {
-            case 1:
-                draw = true;
-                draw_circle();
-                break;
-            case 2:
-                fill();
-                break;
-            default:
-                break;
-        }
-    }
-});
-document.addEventListener("mouseup", function () {
-    draw = false;
-});
+// Global Vars
+// 1 - paint; 2 - fill; 3 - shape
+let activeMode = 1;
+let activeColor;
+let activeBrushSize;
 
+init();
+
+const c = document.getElementById('canvas');
+const ctx = c.getContext('2d');
+
+const buttonSave = document.querySelector("#btnSave");
+const buttonCancel = document.querySelector("#btnCancel");
+const buttonUndo = document.querySelector("#btnUndo");
+const buttonModePaint = document.querySelector("#btnModePaint");
+const buttonModeFill = document.querySelector("#btnModeFill");
+const buttonModeShape = document.querySelector("#btnModeShape");
+
+let currentPosition = { x: 0, y: 0 };
+
+c.addEventListener('touchmove', draw);
+c.addEventListener('touchstart', updatePosition);
+
+buttonSave.addEventListener("click", () => alert("Save Artwork"))
+buttonCancel.addEventListener("click", () => alert("Cancel Editing"))
+buttonUndo.addEventListener("click", () => alert("Undo last Step"))
+buttonModePaint.addEventListener("click", () => changeMode(1, buttonModePaint))
+buttonModeFill.addEventListener("click", () => changeMode(2, buttonModeFill))
+buttonModeShape.addEventListener("click", () => changeMode(3, buttonModeShape))
 
 /**
- * korrigiert Maus-position auf screen zu Maus-Position auf canvas
- * wenn Maus gedrückt gehalten wird, wird Zeichen-Funktion aufgerufen
- * @param event
+ * Set active mode (1) drawing, (2) filling, (3) shapes
+ *
+ * @param newMode selected mode
+ * @param activeButton pressed button, to be set active
  */
-function position_handler(event) {
-    let canvas = document.getElementById('canvas');
-    x = event.pageX - canvas.offsetLeft;
-    y = event.pageY - canvas.offsetTop;
-    if (draw) {
-        draw_circle();
-    }
+function changeMode(newMode, activeButton) {
+	const modeButtons = document.querySelectorAll('.btn-mode');
+	modeButtons.forEach(button => button.classList.remove('active'));
+
+	activeMode = newMode;
+	activeButton.classList.add('active');
+
+	if (activeMode === 3) {
+		alert('Formenfenster öffnen');
+	}
 }
 
-
 /**
- * Ändert Modus zwischen Zeichnen (1), Füllen (2) und Form-Modus (3)
- * @param new_mode
- * @param activeButton
- **/
+ * Set active color
+ *
+ * @param newColor selected color
+ * @param activeButton pressed button, to be set active
+ */
+function changeColor(newColor, activeButton) {
+	const colorButtons = document.querySelectorAll('.btn-color');
+	colorButtons.forEach(button => button.classList.remove('active'));
 
-function change_mode(new_mode, activeButton) {
-    mode = new_mode;
-    let mode_buttons = document.querySelectorAll(".btn-mode");
-    mode_buttons.forEach(button => button.classList.remove("active"));
-    activeButton.classList.add("active");
-    if (mode == 3) {
-        alert("Formenfenster öffnen");
-    }
+	activeColor = newColor;
+	activeButton.classList.add('active');
 }
 
-
 /**
- * Ändert ausgewählte Farbe
- * @param new_color
- * @param activeButton
+ * Set active brush size
+ *
+ * @param newBrushSize selected brush size
+ * @param activeButton pressed button, to be set active
  */
+function changeSize(newBrushSize, activeButton) {
+	const sizeButtons = document.querySelectorAll('.btn-size');
+	sizeButtons.forEach(button => button.classList.remove('active'));
 
-function change_color(new_color, activeButton) {
-    activeColor = new_color;
-    let color_buttons = document.querySelectorAll(".btn-color");
-    color_buttons.forEach(button => button.classList.remove("active"));
-    activeButton.classList.add("active");
+	activeBrushSize = newBrushSize;
+	activeButton.classList.add('active');
 }
 
-
 /**
- * ändert ausgewählte Größe
- * @param new_size - Radius
- * @param activeButton
+ * Update mouse position
+ *
+ * @param {object} e event
  */
-
-function change_size(new_size, activeButton) {
-    activeBrushSize = new_size;
-    let size_buttons = document.querySelectorAll(".btn-size");
-    size_buttons.forEach(button => button.classList.remove("active"));
-    activeButton.classList.add("active");
+function updatePosition(e) {
+	currentPosition.x = e.touches[0].pageX - canvas.offsetLeft;
+	currentPosition.y = e.touches[0].pageY - canvas.offsetTop;
 }
 
-
 /**
- * Zeichnet Kreis auf Canvas
+ * Draw line in canvas
+ *
+ * @param {object} e event
  */
+function draw(e) {
+	ctx.beginPath();
+	ctx.lineWidth = activeBrushSize;
+	ctx.lineCap = 'round';
+	ctx.strokeStyle = activeColor;
 
-function draw_circle() {
-    let canvas = document.getElementById('canvas');
-    let context = canvas.getContext("2d");
-    context.beginPath();
-    context.arc(x, y, activeBrushSize, 0, Math.PI * 2, false);
-    context.fillStyle = activeColor;
-    context.fill();
+	ctx.moveTo(currentPosition.x, currentPosition.y);
+	updatePosition(e);
+	ctx.lineTo(currentPosition.x, currentPosition.y);
+
+	ctx.stroke();
 }
 
-
 /**
- * Ändert Hintergrundfarbe
- * TODO: Füllalgorithmus
+ * Change background color
+ * TODO: implement fill algorithm
  */
-
 function fill() {
-    let canvas = document.getElementById('canvas');
-    canvas.style.backgroundColor = activeColor;
+	const canvas = document.getElementById('canvas');
+	canvas.style.backgroundColor = activeColor;
 }
