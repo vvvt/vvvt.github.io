@@ -12,6 +12,7 @@ body {
     align-items: stretch;
     gap: 8px;
     padding: 8px;
+    overflow: hidden;
 }
 
 header {
