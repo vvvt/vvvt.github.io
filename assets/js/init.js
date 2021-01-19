@@ -19,7 +19,7 @@ function init() {
 			button.onclick = () => {
 				changeSize(brush.size, button);
 			};
-
+			console.log("fetched");
 			buttonWrapperMode.append(button);
 		}));
 
