@@ -1,3 +1,4 @@
+/* General */
 :root {
     --button-size: 6.5vw;
 }
@@ -16,25 +17,21 @@ body {
 }
 
 header {
-    background-color: white;
-}
-
-main {
-    border-radius: 2px;
-    background-color: white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-header {
-    flex-basis: content;
     display: flex;
+    flex-basis: content;
     flex-direction: column;
 }
 
 main {
-    padding: 0;
     flex-grow: 1;
+    padding: 0;
     overflow: hidden;
+}
+
+#sizeWarning {
+    display: none;
+    height: 100%;
+    width: 100%;
 }
 
 main > section {
@@ -45,46 +42,46 @@ main > section {
     align-content: stretch;
 }
 
-main > section > section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: stretch;
-    flex-wrap: wrap;
-}
-
-#shapeGallery {
-    flex-grow: 1;
-    overflow-y: scroll;
-}
-
-#galleryButtons {
-    flex-basis: content;
-}
-
-.shape-gallery-entry {
-    background: aliceblue;
-    display: flex;
-    flex-direction: column;
-    width: 27%;
-    margin: 2%;
-    border-radius: 20px;
-}
-
-.shape-gallery-entry.active {
-    background: rgb(170, 215, 255);
+canvas {
+    height: 100%;
+    width: 100%;
 }
 
 .hidden {
     display: none;
 }
 
-canvas {
-    background-color: #ffffff;
-    height: 100%;
-    width: 100%;
+.card {
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
+/* Index Page */
+
+.display {
+    box-shadow: none;
+    display: flex;
+}
+
+#designGallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+#designGallery div {
+    background: aliceblue;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    padding: 2%;
+    margin: 1%;
+    border-radius: 10px;
+}
+
+/* Draw Buttons */
 button {
     width: var(--button-size);
     height: var(--button-size);
@@ -127,11 +124,36 @@ header > section {
     justify-content: space-between;
 }
 
-#sizeWarning {
-    display: none;
-    height: 100%;
-    width: 100%;
-    background-color: white;
+/* Shape Modal */
+
+main > section > section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: stretch;
+    flex-wrap: wrap;
+}
+
+#shapeGallery {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+#galleryButtons {
+    flex-basis: content;
+}
+
+.shape-gallery-entry {
+    background: aliceblue;
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+    margin: 2%;
+    border-radius: 20px;
+}
+
+.shape-gallery-entry.active {
+    background: rgb(170, 215, 255);
 }
 
 /* Media Query for tablets */
