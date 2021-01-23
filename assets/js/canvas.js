@@ -23,7 +23,7 @@ const shapeModal = document.querySelector("#shapeModal");
 const canvasContainer = document.querySelector("#canvasContainer");
 
 buttonSave.addEventListener("click", () => window.location.href = './index.html');
-buttonCancel.addEventListener("click", () => alert("Cancel Editin;g"));
+buttonCancel.addEventListener("click", () => alert("Cancel Editing"));
 buttonUndo.addEventListener("click", () => alert("Undo last Step"));
 buttonModePaint.addEventListener("click", () => changeMode(1, buttonModePaint));
 buttonModeFill.addEventListener("click", () => changeMode(2, buttonModeFill));
@@ -34,8 +34,12 @@ buttonModeShape.addEventListener("click", () => {
 buttonShapeAccept.addEventListener("click", appendShape);
 buttonShapeCancel.addEventListener("click", toggleShapeModal);
 
-canvasContainer.addEventListener("click", () => { if (activeMode == 2) { fill(); } });
-canvasContainer.addEventListener("touchstart", () => { if (activeMode == 2) { fill(); } });
+canvasContainer.addEventListener("click",(e) => {if(activeMode == 2) {fill(e.layerX, e.layerY);}});
+canvasContainer.addEventListener("touchstart",(e) => {
+	if(activeMode == 2) {
+		fill(e.changedTouches[0].pageX + e.layerX, e.changedTouches[0].pageY + e.layerY);
+	}
+});
 
 /**
  * Set up interface components by adding buttons and a canvas.
@@ -107,10 +111,10 @@ function buildInterface() {
 		.then(shapes => shapes.forEach(shape => {
 			const div = document.createElement('div');
 			const img = document.createElement('img');
-			img.id = `shape_${shape.name}`
+			img.id = `shape_${shape.name}`;
 			img.src = shape.img;
 			div.append(img);
-			div.classList.add('shape-gallery-entry')
+			div.classList.add('shape-gallery-entry');
 			div.addEventListener('click', () => {
 				const activeGalleryElements = document.querySelector('.shape-gallery-entry.active');
 				activeGalleryElements && activeGalleryElements.classList.remove('active');
@@ -150,21 +154,24 @@ function changeMode(mode, activeButton) {
 				object.lockMovementY = true;
 				object.lockRotation = true;
 				object.lockScalingX = true;
-				object.lockScalingY = true;
+				object.lockScalingY	= true;
 				object.hasBorders = false;
 				object.hasControls = false;
 				object.perPixelTargetFind = true;
-				/* if (object.fill == null) {
-					object.set("fill", canvas.backgroundColor);
-				} */
+				if(object.fill == null) {
+					object.set("fill", 'rgba(255,255,255,0.01)');
+				}
 			});
 			canvas.requestRenderAll();
 			console.log("switched to mode 2");
 			break;
 		case 3:
 			canvas.isDrawingMode = false;
-			canvas.getObjects().forEach(object => object.selectable = false)
+			canvas.getObjects().forEach(object => object.selectable = false);
 			console.log("switched to mode 3");
+			if(canvas.freeDrawingBrush.color == canvas.backgroundColor) {
+				alert("Achtung: Die ausgewählte Farbe und die Hintergrundfarbe sind gleich.");
+			}
 			break;
 	}
 
@@ -201,38 +208,54 @@ function changeSize(brushSize, activeButton) {
 }
 
 /**
- * Changes fill-color of selected path
+ * Changes stroke- or fill-color of selected path
  * or background-color if no path selected
+ * @param x x-coordinate of clicked pixel
+ * @param y y-coordinate of clicked pixel
  */
-function fill() {
+function fill(x,y) {
 	let shape = canvas.getActiveObject();
-	if (shape == null) {
+	if(shape == null) {
 		canvas.backgroundColor = canvas.freeDrawingBrush.color;
 	} else {
-		shape.set("fill", canvas.freeDrawingBrush.color);
+		if(shape.fill == shape.stroke) {
+			shape.set("fill", canvas.freeDrawingBrush.color);
+			shape.set("stroke", canvas.freeDrawingBrush.color);
+		}
+
+		let pixel = ctx.getImageData(x, y, 1, 1).data;
+		let pixelColor = new fabric.Color('rgb(' + pixel[0] + ',' + pixel[1] + ',' + pixel[2] + ')').toHex();
+		let strokeColor = new fabric.Color(shape.stroke).toHex();
+		if (pixelColor == strokeColor) {
+			shape.set("stroke", canvas.freeDrawingBrush.color);
+		} else {
+			shape.set("fill", canvas.freeDrawingBrush.color);
+		}
 	}
 	canvas.requestRenderAll();
 }
 
 /**
- * 
+ * Adds selected icon to canvas
  */
 function appendShape() {
 	const selectedShape = document.querySelector(".shape-gallery-entry.active img");
 	selectedShape && console.log(selectedShape);
 
 	fabric.loadSVGFromURL(selectedShape.src, shapes => {
-		shapes[1].set("fill", canvas.freeDrawingBrush.color);
-		let shape = new fabric.Group(shapes.filter(s => s.fill));
-		console.log(shapes.filter(s => s.fill));
+		let filteredShapes = shapes.filter(s => s.fill);
+		for (i = 0; i < filteredShapes.length; i++) {
+			filteredShapes[i].set("fill", canvas.freeDrawingBrush.color);
+		}
+		let shape = new fabric.Group(filteredShapes);
 		shape.id = `object_${selectedShape.id}`;
 		//shape.selectable = false;
-		shape.scaleY = 20;
-		shape.scaleX = 20;
+		shape.scaleY = 5;
+		shape.scaleX = 5;
 		//oImg.hasControls = false;
 		canvas.setActiveObject(shape);
 		canvas.add(shape);
-	})
+	});
 
 	toggleShapeModal()
 }
