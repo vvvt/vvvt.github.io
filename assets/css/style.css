@@ -157,7 +157,7 @@ main > section > section {
 }
 
 /* Media Query for tablets */
-@media (orientation: portrait) and (max-width: 43em),
+/* @media (orientation: portrait) and (max-width: 43em),
     (orientation: landscape) and (max-height: 43em) {
     body {
         background-color: #ffeaea;
@@ -169,7 +169,7 @@ main > section > section {
     main {
         display: none;
     }
-}
+} */
 /* Media Query for small displays */
 @media (min-width: 62em) {
     body {
